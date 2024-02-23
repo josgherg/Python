@@ -142,8 +142,8 @@ class Email:
         return self.email
 
     def send(self, nombre):
-        email_sender = 'herr100j@gmail.com'
-        email_password = 'ogbe igch jcpl hdpq'
+        email_sender = ''
+        email_password = ''
         email_receiver = self.email
 
         subject= 'Bienvenido'
@@ -210,8 +210,8 @@ class Gui(gui.Tk):
         self.datbirthText = gui.StringVar()
         self.countryMainLabel = gui.StringVar()
         self.countryText = gui.StringVar()
-        self.emailMainLabel = gui.StringVar()
-        self.emailText = gui.StringVar()
+        self.eMainLabel = gui.StringVar()
+        self.eText = gui.StringVar()
         self.telfMainLabel = gui.StringVar()
         self.telfText = gui.StringVar() 
         self.usersLabel= gui.StringVar()
@@ -252,7 +252,7 @@ class Gui(gui.Tk):
         self.lastnameText.set("")
         self.datbirthText.set("")
         self.countryEntry.set("")
-        self.emailText.set("")
+        self.eText.set("")
         self.telfText.set("")
 
     def secondWindow(self):
@@ -299,10 +299,10 @@ class Gui(gui.Tk):
             self.countryEntry = gui2.Combobox(self,  values=["Argentina", "Bolivia", "Brasil", "Colombia", "Chile", "Ecuador", "Guyana", "Mexico", "Peru", "Venezuela" ], style="BW.TLabel", font=("Verdana", 12))
             self.countryEntry.place(relx=self.originx + self.deltax, rely=self.originy +(3*self.deltay2)-self.diff, width=200, anchor="nw")
             
-            self.emailMainLabel.set("E-mail")
-            self.emailLabel = gui.Label(self.mainFrame, textvar=self.emailMainLabel)
-            self.emailLabel.config(fg="white", bg="black", font=("Verdana",12)) 
-            self.emailLabel.place(relx=self.originx, rely=self.originy +4*self.deltay1, anchor="nw")
+            self.eMainLabel.set("E-")
+            self.eLabel = gui.Label(self.mainFrame, textvar=self.eMainLabel)
+            self.eLabel.config(fg="white", bg="black", font=("Verdana",12)) 
+            self.eLabel.place(relx=self.originx, rely=self.originy +4*self.deltay1, anchor="nw")
 
             self.emailEntry = gui.Entry(self, textvar=self.emailText)
             self.emailEntry.config(fg="black", bg="white", font=("Verdana",12)) 
